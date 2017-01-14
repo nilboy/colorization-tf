@@ -83,7 +83,7 @@ class Solver(object):
       config.gpu_options.allow_growth = True
       sess = tf.Session(config=config)
       sess.run(init)
-      saver1.restore(sess, './models/model.ckpt')
+      #saver1.restore(sess, './models/model.ckpt')
       #nilboy
       summary_writer = tf.summary.FileWriter(self.train_dir, sess.graph)
       for step in xrange(self.max_steps):
@@ -112,6 +112,6 @@ class Solver(object):
           summary_writer.add_summary(summary_str, step)
 
         # Save the model checkpoint periodically.
-        if step % 32000 == 0:
+        if step % 1000 == 0:
           checkpoint_path = os.path.join(self.train_dir, 'model.ckpt')
           saver.save(sess, checkpoint_path, global_step=step)
