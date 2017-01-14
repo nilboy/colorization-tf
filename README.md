@@ -22,10 +22,13 @@ A Tensorflow implementation of ECCV2016 paper([Colorful Image Colorization](http
 ```
 python tools/create_imagenet_list.py
 ```
+
 #### train
+
 ```
 python tools/train.py -c conf/train.cfg
 ```
+
 #### Train your customer data
 
 1. transform your training data to text_record file
@@ -35,6 +38,7 @@ python tools/train.py -c conf/train.cfg
 3. write your own train-configure file
 
 4. train (python tools/train.py -c $your_configure_file)
+
 ###test demo
 
 1. Download pretrained model(<a>https://drive.google.com/file/d/0B-yiAeTLLamRWVVDQ1VmZ3BxWG8/view?usp=sharing</a>)
